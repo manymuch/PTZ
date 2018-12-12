@@ -11,11 +11,14 @@ For serial communications part, I use [CSerial](https://www.codeguru.com/cpp/i-n
     if your computer doesn't have serial ports, use a USB to RS232 Adapter
 3. Check your Systems Serial Ports COM connection status, for example: COM1 or COM2
 4. change [here](https://github.com/manymuch/PTZ/blob/master/PTZ.cpp#L20) to your COM port number
-    for example, if your camera is connected to your computer on COM1, than:
+    for example, if your camera is connected to your computer on COM1,
     ```
     if (ptz1.Open(2, 9600) == FALSE) {
-
     ```
 
+## Notes
 PTZ.cpp is just a demo usage to test serial.cpp,
 you can use your own code to use function in serial.h to control the vedio camera
+
+The video camera don't have close loop control for pan tilt angles,
+so the project will do auto calibration after a few actions
